@@ -1,9 +1,11 @@
-# Nuxt 3 Minimal Starter
+# Nuxt 3 Starter
+
+This template has testing features, database, commit linter, eslint and prettier already configured.
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-## Setup
 
+## Setup
 Make sure to install the dependencies:
 
 ```bash
@@ -21,8 +23,8 @@ bun install
 ```
 
 ## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the development server on `http://localhost:3000` and Postgress database at `http://localhost:5432`:
+Note that this template assumes that you have Docker.
 
 ```bash
 # npm
@@ -38,8 +40,66 @@ yarn dev
 bun run dev
 ```
 
-## Production
+## Test
+Test your application:
 
+```bash
+# npm
+npm run test
+
+# pnpm
+pnpm run test
+
+# yarn
+yarn test
+
+# bun
+bun run test
+```
+
+## Code Lint
+Lint your code with `eslint` and `prettier`
+
+```bash
+# npm
+npm run lint:prettier:check
+npm run lint:eslint:check
+
+# pnpm
+pnpm run lint:prettier:check
+pnpm run lint:eslint:check
+
+# yarn
+yarn lint:prettier:check
+yarn lint:eslint:check
+
+# bun
+bun run lint:prettier:check
+bun run lint:eslint:check
+```
+
+## Commit Lint
+Commit Patterns with `conventional-commits`:
+
+```bash
+# npm
+git add -A
+npm run commit
+
+# pnpm
+git add -A
+pnpm run commit
+
+# yarn
+git add -A
+yarn commit
+
+# bun
+git add -A
+bun run commit
+```
+
+## Production
 Build the application for production:
 
 ```bash
